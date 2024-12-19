@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			background-color: #f2f2f2;
+		}
+		header {
+			background-color: #333;
+			color: #fff;
+			padding: 10px;
+			text-align: center;
+		}
+		main {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: top;
+			min-height: 100vh;
+			padding: 50px;
+			box-sizing: border-box;
+		}
+		button {
+			background-color: #4CAF50;
+			color: #fff;
+			border: none;
+			padding: 20px 40px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 10px;
+			cursor: pointer;
+			border-radius: 10px;
+			box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+		transition: all 0.2s ease-in-out;
+		}
+		button:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+		}
+		footer {
+			background-color: #333;
+			color: #fff;
+			padding: 50px;
+			text-align: center;
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+		}
+		@media screen and (min-width: 768px) {
+			main {
+				flex-direction: row;
+			}
+			button {
+				margin: 0;
+			}
+		}
+	</style>
+	<script>
+		function clickTxn(){
+			console.log("enter")
+			window.location.href = './api';
+	}
+	</script>
+</head>
+<body>
+	<header>
+		<h1>Avatar Generator</h1>
+		<h3>This app calls the backend service to generate a random avatar</h3>
+	</header>
+	<main>
+		<table>
+<tr align="center">
+	<td >
+		<button onclick="clickTxn()">Generate your random avatar!</button>
+		</td>
+	</tr>
+<tr align="center">
+	<td>
+		<img src="<%= avatar %>"/>
+	</td>
+	</tr>
+</table>
+	</main>
+	<footer>
+		<p></p>
+	</footer>
+   
+</html>
